@@ -7,7 +7,11 @@ class Veiculo:
 
     def ligas_motor(self):
         print("engine strart")
-
+    def freiar(self):
+        print("Freios acionados")
+        
+    def acelerar(self):
+        print("Acelerando")
         
         
         
@@ -18,7 +22,15 @@ class Moto(Veiculo):
     pass
 
 class Caminhão(Veiculo):
-    pass
+    def __init(self,cor,modelo,nome,rodas,carregado):
+        super().__init__(cor,modelo,nome,rodas,carregado)
+        self.carregado = carregado
+        
+    def esta_carregado(self):
+        print(f"{'Sim' if self.carregado else 'Não'}estou carregado")
+        
 
 moto = Moto("Fazer","Preta","Moto carenada","ABCD123")
-print(moto.cor)
+moto.ligas_motor()
+moto.acelerar()
+moto.freiar()
